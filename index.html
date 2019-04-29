@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=500" />
+	<meta name="keywords" content="" />
+	<meta name="author"	content="Constantin DE LA ROCHE" />
+	<title>Petroleum</title>
+
+	<link rel="stylesheet" href="css/petroleum.css" type="text/css">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/examples.css" type="text/css">
+	<link rel="stylesheet" href="css/demo.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/plugins/animation.gsap.js"></script>
+	<script src="js/backgroundVideo.js"></script>
+       
+	<script>
+	
+        </script>
+
+</head>
+<body>
+<div id="container">
+	<div id="content-wrapper">
+		<div id="example-wrapper">
+			
+			<div class="scrollContent">
+
+				<section id="titlechart" class="panel title">
+					<div id="trigger00" class="spacer s1"></div>
+
+							<img id="back-top" src="img/back-top.png">
+							<div class="header">
+							<img id="petr" src="img/petr.png">
+							<img id="o" src="img/o.png">
+							<img id="leum" src="img/leum.png">
+							</div>
+<p id="slogan">Une introduction à la Oilchain</p>
+<p id="titre-info">Projet vainqueur du concours "Génération Blockchain 2017"<br>
+co-organisé par <b style="color: #008252;">BNP Paribas</b>, <b style="color: #e51717;">HSBC</b> et <b style="color: #43162b;">Sia Partners</b>.</p>
+						<img id="back-bottom" src="img/back-bottom.png">
+					<div id="trigger01" class="spacer s1"></div>
+				</section>
+					<script>
+						var controller = new ScrollMagic.Controller();
+						$(function () { // wait for document ready
+						if($(window).width() > 800){
+						// init controller
+						var reveal = new TimelineMax()
+							.add([
+								TweenMax.to("#back-top", 50, {opacity: 0}),
+								TweenMax.to("#o", 50, {rotation: 180, y: 50}),
+								TweenMax.to("#petr", 50, {scale: 1, x: 0}, {scale: 1, x: $(window).width()/6}),
+								TweenMax.to("#leum", 50, {scale: 1, x: 0}, {scale: 1, x: -$(window).width()/6}),
+								TweenMax.to("#back-bottom", 50, {opacity: 0}),
+								TweenMax.to("#slogan", 100, {top: "-=100"}),
+								TweenMax.to("#titre-info", 100, {scale: 1.8})
+							]);
+
+						new ScrollMagic.Scene({
+							duration: 800,
+							offset: 0
+						})
+						.setTween(reveal)
+						.addTo(controller);
+						}
+						else{
+							$("#container").load('mini.html');
+						}
+						});
+					</script>
+
+	<section class="panel speech slide">
+		<div class="text" id="speech1">
+			<div id="part-left-30">
+				<img id="speech-logo-left" style="width: 100%;" src="img/logo.png">
+			</div>
+			<div id="part-right-70">
+			<div id="trigger10" class="spacer s1"></div>
+			<p id="p1">
+			Le marché actuel du baril de pétrole brut souffre d'opacité et de rigidité. En effet, il est impossible pour les investisseurs de stocker eux-mêmes du pétrole à des fins spéculatives. Les seules alternatives pour pénétrer ce marché sont donc de faire appel à des produits dérivés couteux (ETF, CFD, futures) ne reflétant que partiellement le cours réel du pétrole.
+			</p>
+			<div id="trigger11" class="spacer s0"></div>
+			<p id="p2">
+			Petroleum consiste en la mise en place d'un marché d'échange de titres afférents à des barils de pétrole brut, en cours de production par différentes compagnies pétrolières. Il se présente comme un produit bancaire, sous forme d'application, que les banques proposeront à leurs clients investisseurs désireux de prendre position sur le pétrole brut.
+			</p>
+			<div id="trigger12" class="spacer s0"></div>
+			<p id="p3">
+			Petroleum se base sur la technologie Blockchain permettant d'offrir des transactions sécurisées et traçables à un coût négligeable, le tout par le biais d'un système automatisé. Cette technologie nous permet par ailleurs d'intégrer très simplement de nouveaux acteurs (banques, compagnies, investisseurs).
+			</p>
+			<img id="speech-logo-right" style="width: 10%;" src="img/o.png">
+			</div>
+		</div>
+	</section>
+				<script>
+					$(function () { // wait for document ready
+					// init controller
+
+					var logo_fall1 = new TimelineMax()
+						.add([
+							TweenMax.to("#speech-logo-left", 1, {y: 300}),
+						]);
+
+					var logo_fall2 = new TimelineMax()
+						.add([
+							TweenMax.from("#speech-logo-right", 5, {opacity: -1}),
+							TweenMax.to("#speech-logo-right", 100, {y: 500}),
+							TweenMax.to("#speech-logo-right", 50, {opacity: 1})
+						]);
+
+					new ScrollMagic.Scene({
+						duration: 200,
+						offset: 100,
+						triggerElement: "#trigger10"
+					})
+					.setTween(logo_fall1)
+					.addTo(controller);
+					
+					new ScrollMagic.Scene({
+						duration: 300,
+						offset: -500,
+						triggerElement: "#trigger20"
+					})
+					.setTween(logo_fall2)
+					.addTo(controller);
+
+					});
+				</script>
+
+	<section class="panel presentation">
+		<div class="text">
+		<div id="trigger20" class="spacer s0"></div>
+	
+	<div id="part-left">
+<p id="p1">
+Originaire d’Auxerre où il a passé l’ensemble de sa
+scolarité jusqu’à l’obtention du Baccalauréat, c’est
+dans la filière mathématiques-physique du lycée Louis
+Le Grand qu’Alexandre effectue sa classe préparatoire
+aux grandes écoles d’ingénieur. Après deux années
+d’étude, il intègre successivement Centrale-Supélec et
+l’ESCP-Europe, où il étudie actuellement sur le campus
+de Londres. Féru de mathématiques et de nouvelles
+technologies, Alexandre profite aujourd’hui de son
+double cursus pour étoffer son champs de compé
+tences et notamment concilier innovation, conception
+et mise en oeuvre d’un projet.
+</p>
+<p id="alexandre-name">Alexandre De La Roche</p>
+<div style="background-color: white;">
+<img id="alex-portrait" src="img/alex.png">
+</div>
+<div class="transition-wave-white"></div>
+	</div>
+
+	<div id="part-right">
+<p id="p2">
+Passionné depuis toujours par les mathématiques, il
+découvre la finance de marché dès le lycée et fait alors le
+choix de rejoindre le Double-Diplôme entre SciencesPo Pa
+ris et Paris 1 Panthéon-Sorbonne en Mathématiques Appliquées
+aux Sciences Sociales. Il effectue ensuite une année
+d’échange à la New York University où il s’initie alors à des
+thèmes divers allant du traitement de données au trading
+algorithmique. De retour en France, il suit actuellement le
+Master Finance et Stratégie de SciencesPo Paris ainsi que
+le Master de Mathématiques Appliquées à l'Économie et la
+Finance de Paris1, dans le but de devenir analyste quantitatif
+ dans le secteur financier. Musicien amateur, il pratique
+régulièrement le Jazz à travers plusieurs instruments, se
+produisant notamment avec comme saxophoniste un certain Alexandre.
+</p>
+<p id="sala-name">Alex Sala</p>
+<img id="sala-portrait" src="img/sala.png">
+	</div>
+<div class="transition-wave-black"></div>
+
+		</div>
+	</section>
+				<script>
+					$(function () { // wait for document ready
+					// init controller
+
+					var potraits1 = new TimelineMax()
+						.add([
+							TweenMax.to("#speech1", 1, {opacity: 1}),
+							TweenMax.from("#alex-portrait", 1, {y:-100, x: -10, opacity: 0}, {opacity: 1}),
+							TweenMax.from("#sala-portrait", 1, {y:-100, x: 10, opacity: 0}, {opacity: 1}),
+							TweenMax.from("#alexandre-name", 1, {y:-100, x: -10, opacity: 0}, {opacity: 1}),
+							TweenMax.from("#sala-name", 1, {y:-100, x: 10, opacity: 0}, {opacity: 1}),
+						]);
+
+					new ScrollMagic.Scene({
+						duration: 100,
+						offset: 300,
+						triggerElement: "#trigger20"
+					})
+					.setTween(potraits1)
+					.addTo(controller);
+					
+					});
+					</script>
+
+	<section class="panel video slide">
+		<video class="visible-desktop" id="hero-vid" controls preload="auto" loop>
+	        <source type="video/mp4" src="img/Petroleum.mp4"></source>
+	    </video>
+	</section>
+
+	<section class="panel contact slide">
+		<div id="trigger30" class="spacer s1"></div>
+		<div id="map"></div>
+		<h2 id="contact-title">Contact<h2>
+		<p id="contact-text">
+			<u>Alexandre de la Roche</u><br>
+			a.delaroche@petroleum-project.com<br>
+			+33 6 01 32 24 06<br>
+			<u>Alex Sala</u><br>
+			a.sala@petroleum-project.com<br>
+			+33 6 11 87 71 49<br>
+			<br>
+			<b id="addr-societe">Adresse de la société : 20 rue Thibaud 75014 Paris</b><br>
+			<a href="https://www.linkedin.com/company-beta/11128409/">
+				<img src="img/linkedin.png" class="logo">
+			</a>
+		</p>
+	    <script>
+	      var map;
+	      function initMap() {
+	        map = new google.maps.Map(document.getElementById('map'), {
+	          center: {lat: 48.8301961, lng: 2.324371},
+	          zoom: 16
+	        });
+	      };
+	    </script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSF8LHLL90QKWHVkesc060U2wykyWYD0c&callback=initMap"
+		    async defer></script>
+	</section>
+					<script>
+		$(function () { // wait for document ready
+			// get all slides
+			var slides = document.querySelectorAll("section.panel.slide");
+			// create scene for every slide
+			for (var i=0; i<slides.length; i++) {
+				new ScrollMagic.Scene({
+						triggerElement: slides[i],
+						triggerHook: 'onLeave'
+					})
+					.setPin(slides[i])
+					.addTo(controller);
+			}
+
+		});
+					</script>
+				<div class="spacer s_viewport"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

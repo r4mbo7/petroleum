@@ -1,0 +1,146 @@
+<section id="section-wipes">
+	<section class="speech">
+		<div class="text" id="speech1">
+			<div id="part-left-30">
+				<img id="speech-logo-left" style="width: 100%;" src="img/logo_mini.png">
+			</div>
+			<div id="part-right-70">
+			<div id="trigger10" class="spacer s1"></div>
+			<p id="p1" class="p-mini">
+			Le marché actuel du baril de pétrole brut souffre d'opacité et de rigidité. En effet, il est impossible pour les investisseurs de stocker eux-mêmes du pétrole à des fins spéculatives. Les seules alternatives pour pénétrer ce marché sont donc de faire appel à des produits dérivés couteux (ETF, CFD, futures) ne reflétant que partiellement le cours réel du pétrole.
+			</p>
+			<div id="trigger11" class="spacer s0"></div>
+			<p id="p2" class="p-mini">
+			Petroleum consiste en la mise en place d'un marché d'échange de titres afférents à des barils de pétrole brut, en cours de production par différentes compagnies pétrolières. Il se présente comme un produit bancaire, sous forme d'application, que les banques proposeront à leurs clients investisseurs désireux de prendre position sur le pétrole brut.
+			</p>
+			<div id="trigger12" class="spacer s0"></div>
+			<p id="p3" class="p-mini">
+			Petroleum se base sur la technologie Blockchain permettant d'offrir des transactions sécurisées et traçables à un coût négligeable, le tout par le biais d'un système automatisé. Cette technologie nous permet par ailleurs d'intégrer très simplement de nouveaux acteurs (banques, compagnies, investisseurs).
+			</p>
+			</div>
+		</div>
+	</section>
+				<script>
+					var controller = new ScrollMagic.Controller({
+					globalSceneOptions: {
+					triggerHook: "onLeave"
+					}
+					});
+
+					$(function () { // wait for document ready
+					// init controller
+
+					var logo_fall1 = new TimelineMax()
+						.add([
+							TweenMax.to("#speech-logo-left", 1, {y: 600, opacity: 0}),
+						]);
+
+					new ScrollMagic.Scene({
+						duration: 200,
+						offset: 100,
+						triggerElement: "#trigger10"
+					})
+					.setTween(logo_fall1)
+					.addTo(controller);
+
+					});
+				</script>
+
+	<section class="presentation" style='height: 1400px;'>
+		<div class="text-mini">
+			<div id="trigger20" class="spacer s1"></div>
+			<div id="part-left">
+				<p class="p-mini">
+					<b>Alexandre De La Roche</b><br>
+					Originaire d’Auxerre où il a passé l’ensemble de sa
+					scolarité jusqu’à l’obtention du Baccalauréat, c’est
+					dans la filière mathématiques-physique du lycée Louis
+					Le Grand qu’Alexandre effectue sa classe préparatoire
+					aux grandes écoles d’ingénieur. Après deux années
+					d’étude, il intègre successivement Centrale-Supélec et
+					l’ESCP-Europe, où il étudie actuellement sur le campus
+					de Londres. Féru de mathématiques et de nouvelles
+					technologies, Alexandre profite aujourd’hui de son
+					double cursus pour étoffer son champs de compé
+					tences et notamment concilier innovation, conception
+					et mise en oeuvre d’un projet.
+				</p>
+				<img id="alex-portrait" src="img/alex.png" class="portait">
+			</div>
+			<div class="transition-wave-white" style="z-index: 9999;"></div>
+
+			<div id="part-right">
+				<p class="p-mini">
+					<b>Alex Sala</b><br>
+					Passionné depuis toujours par les mathématiques, il
+					découvre la finance de marché dès le lycée et fait alors le
+					choix de rejoindre le Double-Diplôme entre SciencesPo Pa
+					ris et Paris 1 Panthéon-Sorbonne en Mathématiques Aprèspliquées
+					aux Sciences Sociales. Il effectue ensuite une année
+					d’échange à la New York University où il s’initie alors à des
+					thèmes divers allant du traitement de données au trading
+					algorithmique. De retour en France, il suit actuellement le
+					Master Finance et Stratégie de SciencesPo Paris ainsi que
+					le Master de Mathématiques Appliquées à l'Économie et la
+					Finance de Paris1, dans le but de devenir analyste quantitatif
+					 dans le secteur financier. Musicien amateur, il pratique
+					régulièrement le Jazz à travers plusieurs instruments, se
+					produisant notamment avec comme saxophoniste un certain Alexandre.
+				</p>
+				<img id="sala-portrait" src="img/sala.png" class="portait">
+			</div>
+			<div class="transition-wave-black" style="z-index: 9999;"></div>
+
+		</div>
+				<div style='clear:both'></div>
+
+	</section>
+				<script>
+					$(function () { // wait for document ready
+					// init controller
+
+					var potraits1 = new TimelineMax()
+						.add([
+							TweenMax.to("#speech1", 1, {opacity: 0}),
+							TweenMax.from("#alex-portrait", 300, {opacity: 0}),
+							TweenMax.from("#sala-portrait", 300, {opacity: 0}),
+							TweenMax.to("#alex-portrait", 700, {y: 700}),
+							TweenMax.to("#sala-portrait", 700, {y: 700}),
+						]);
+
+					new ScrollMagic.Scene({
+						duration: 1400,
+						offset: -50,
+						triggerElement: "#trigger20"
+					})
+					.setTween(potraits1)
+					.addTo(controller);
+					
+					});
+					</script>
+
+	<section class="panel video">
+		<video class="visible-desktop" id="hero-vid" controls preload="auto" loop>
+	        <source type="video/mp4" src="img/Petroleum.mp4"></source>
+	    </video>
+	</section>
+
+	<section class="panel contact-mini">
+		<div id="trigger30" class="spacer s1"></div>
+		<h2>Contact</h2>
+		<p class="p-mini">
+			<u>Alexandre de la Roche</u><br>
+			a.delaroche@petroleum-project.com<br>
+			+33 6 01 32 24 06<br>
+		</div>
+		<u>Alex Sala</u><br>
+		a.sala@petroleum-project.com<br>
+		+33 6 11 87 71 49<br>
+		<b>Adresse de la société : 20 rue Thibaud 75014 Paris</b><br>
+		<a href="https://www.linkedin.com/company-beta/11128409/">
+			<img src="img/linkedin.png" class="logo">
+		</a>
+		</p>
+	</section>
+
+</section>
